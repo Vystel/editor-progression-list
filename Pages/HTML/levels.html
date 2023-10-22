@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Editor Progression List</title>
+  <link href="../CSS/style.css" rel="stylesheet" type="text/css" />
+  <link href="../CSS/levels.css" rel="stylesheet" type="text/css" />
+  <link rel="shortcut icon" href="/Images/EPLwebsiteLogo.ico" type="image/x-icon">
+  <meta property="og:title" content="Editor Progression List">
+  <meta property="og:description" content="On this website, you'll discover a selection of high-quality levels made using abho's World's Hardest Game level editor, sorted from easiest to hardest.">
+  <meta property="og:image" content="https://i.ibb.co/djrqpx5/logo-2.png">
+  <meta property="og:url" content="editor-progression-list.mystifyre.repl.co">
+  <meta property="og:type" content="website">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <div class="scrollable-container">
+    <div class="header">
+      <div class="header-button-container">
+        <a href="/index.html">
+          <button class="button home header-button">
+            <img src="/Images/UI/Home.png" alt="Home" style="width: 2vw; height: 2vw">
+          </button>
+        </a>
+        <button class="button levels current">Levels</button>
+        <a href="./search.html">
+          <button class="button search header-button">
+            <img src="/Images/UI/Search.png" alt="Search" style="width: 2vw; height: 2vw">
+          </button>
+        </a>
+        <a href="./random.html">
+          <button class="button random header-button">
+            <img src="/Images/UI/Random.png" alt="Random" style="width: 2vw; height: 2vw">
+          </button>
+        </a>
+        <button id="scrollToTopButton" class="button scroll header-button">^</button>
+      </div>
+      <div style="position: absolute; top: 0; left: 50;">
+        <button type="discord" class="button discord" style="width: 3vw; height: 3vw;"
+          onclick="window.open('https://discord.gg/AagvaDSfT4', '_blank')" title="Join TWHG Discord Server">
+          <img src="/Images/UI/Discord.png" alt="Discord Link" style="width: 3vw; height: 3vw">
+        </button>
+        <button type="twhgedit" class="button twhgedit" style="width: 3vw; height: 3vw;"
+          onclick="window.open('https://twhgedit.netlify.app', '_blank')" title="Visit TWHG Editor">
+          <img src="/Images/UI/TWHGEdit.png" alt="TWHG Editor" style="width: 3vw; height: 3vw">
+        </button>
+        <button type="twhgedit2" class="button twhgedit" style="width: 3vw; height: 3vw;"
+          onclick="window.open('https://twhgedit2.netlify.app', '_blank')" title="Visit TWHG Editor 2">
+          <img src="/Images/UI/TWHGEdit2.png" alt="TWHG Editor 2" style="width: 3vw; height: 3vw">
+        </button>
+        <button type="twhgedit3" class="button twhgedit" style="width: 3vw; height: 3vw;"
+          onclick="window.open('https://abho.itch.io/twhg-ue', '_blank')" title="Download TWHG Editor 3">
+          <img src="/Images/UI/TWHGEdit3.png" alt="TWHG Editor 3" style="width: 3vw; height: 3vw">
+        </button>
+      </div>
+    </div>
+
+    <span style="font-size: 3vw">&nbsp;</span>
+
+    <img src="/Images/UI/Logo.png" alt="EPL Logo" class="logo">
+    <div class="button-container">
+      <p class="warning"
+        style="padding-top: .5%; font-size: 1.1vw; text-align: center; color: white; margin: 0 auto; max-width: 80vw;">
+        Remember: Please keep in mind that the levels ranked by difficulty on the page are subjective and may differ
+        based on individual skill levels. It is suggested to play these levels without pause buffering for the intended
+        experience.</p>
+      <p style="padding-top: .5%; font-size: 1.1vw; text-align: center; color: white; margin: 0 auto; max-width: 80vw;">
+        The levels in each of the categories are sorted in a left-to-right, top-to-bottom order.</p>
+      <p style="padding-top: .5%; font-size: 1.1vw; text-align: center; color: white; margin: 0 auto; max-width: 80vw;">
+        Right click a level to mark it as completed.</p>
+      <p id="level-count" style="padding-top: .5%; font-size: 1.1vw; text-align: center; color: white; margin: 0 auto;">
+      </p>
+      <h1 style="padding-top: .5%; font-size: 1vw; text-align: center; color: white;">Stack Categories?</h1>
+      <label class="switch">
+        <input type="checkbox">
+        <span class="slider round"></span>
+      </label>
+    </div>
+
+    <span style="font-size: 1vw">&nbsp;</span>
+
+    <div class="button-container">
+      <button class="button effortless" id="effortlessBtn">Effortless</button>
+      <button class="button trivial" id="trivialBtn">Trivial</button>
+      <button class="button easy" id="easyBtn">Easy</button>
+      <button class="button medium" id="mediumBtn">Medium</button>
+      <button class="button hard" id="hardBtn">Hard</button>
+      <button class="button challenging" id="challengingBtn">Challenging</button>
+      <button class="button brutal" id="brutalBtn">Brutal</button>
+      <button class="button extreme" id="extremeBtn">Extreme</button>
+      <button class="button insane" id="insaneBtn">Insane</button>
+      <button class="button mythical" id="mythicalBtn">Mythical</button>
+    </div>
+    <div class="container">
+      <div id="Effortless" class="tabcontent"></div>
+      <div id="Trivial" class="tabcontent"></div>
+      <div id="Easy" class="tabcontent"></div>
+      <div id="Medium" class="tabcontent"></div>
+      <div id="Hard" class="tabcontent"></div>
+      <div id="Challenging" class="tabcontent"></div>
+      <div id="Brutal" class="tabcontent"></div>
+      <div id="Extreme" class="tabcontent"></div>
+      <div id="Insane" class="tabcontent"></div>
+      <div id="Mythical" class="tabcontent"
+        style="background: linear-gradient(180deg, rgba(138,188,249,0.2) 0%, rgba(162,252,216,0.2) 50%, rgba(199,123,247,0.2) 100%);">
+      </div>
+      <br>
+
+      <script src="../JavaScript/levels.js"></script>
+      <script src="../JavaScript/script.js"></script>
+
+    </div>
+</body>
+
+</html>

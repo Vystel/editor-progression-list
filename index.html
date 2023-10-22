@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Editor Progression List</title>
+  <link href="Pages/CSS/style.css" rel="stylesheet" type="text/css" />
+  <link rel="shortcut icon" href="/Images/EPLwebsiteLogo.ico" type="image/x-icon">
+  <meta property="og:title" content="Editor Progression List">
+  <meta property="og:description" content="Welcome to the Editor Progression List (EPL) for the World's Hardest Game! On this website, you'll discover a selection of high-quality levels made using abho's level editor, sorted from easiest to hardest.">
+  <meta property="og:image" content="https://i.ibb.co/djrqpx5/logo-2.png">
+  <meta property="og:url" content="editor-progression-list.mystifyre.repl.co">
+  <meta property="og:type" content="website">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <div class="scrollable-container">
+    <div class="header">
+      <div class="header-button-container">
+        <button class="button home current">
+          <img src="/Images/UI/Home.png" alt="Home" style="width: 2vw; height: 2vw">
+        </button>
+        <a href="Pages/HTML/levels.html"><button class="button levels header-button">Levels</button></a>
+        <a href="Pages/HTML/search.html">
+          <button class="button search header-button">
+            <img src="/Images/UI/Search.png" alt="Search" style="width: 2vw; height: 2vw">
+          </button>
+        </a>
+        <a href="Pages/HTML/random.html">
+          <button class="button random header-button">
+            <img src="/Images/UI/Random.png" alt="Random" style="width: 2vw; height: 2vw">
+          </button>
+        </a>
+        <button id="scrollToTopButton" class="button scroll header-button">^</button>
+      </div>
+      <div style="position: absolute; top: 0; left: 50;">
+        <button type="discord" class="button discord" style="width: 3vw; height: 3vw;"
+          onclick="window.open('https://discord.gg/AagvaDSfT4', '_blank')" title="Join TWHG Discord Server">
+          <img src="/Images/UI/Discord.png" alt="Discord Link" style="width: 3vw; height: 3vw">
+        </button>
+        <button type="twhgedit" class="button twhgedit" style="width: 3vw; height: 3vw;"
+          onclick="window.open('https://twhgedit.netlify.app', '_blank')" title="Visit TWHG Editor">
+          <img src="/Images/UI/TWHGEdit.png" alt="TWHG Editor" style="width: 3vw; height: 3vw">
+        </button>
+        <button type="twhgedit2" class="button twhgedit" style="width: 3vw; height: 3vw;"
+          onclick="window.open('https://twhgedit2.netlify.app', '_blank')" title="Visit TWHG Editor 2">
+          <img src="/Images/UI/TWHGEdit2.png" alt="TWHG Editor 2" style="width: 3vw; height: 3vw">
+        </button>
+        <button type="twhgedit3" class="button twhgedit" style="width: 3vw; height: 3vw;"
+          onclick="window.open('https://abho.itch.io/twhg-ue', '_blank')" title="Download TWHG Editor 3">
+          <img src="/Images/UI/TWHGEdit3.png" alt="TWHG Editor 3" style="width: 3vw; height: 3vw">
+        </button>
+      </div>
+    </div>
+
+    <span style="font-size: 3vw">&nbsp;</span>
+
+    <img src="/Images/UI/Logo.png" alt="EPL Logo" class="logo">
+    <p style="padding-top: .5%; font-size: 1.1vw; text-align: center; color: white; margin: 0 auto; max-width: 80vw;">
+      Welcome to the Editor Progression List (EPL) for the World's Hardest Game!<br>
+      On this website, you'll discover a selection of high-quality levels made using abho's level editor, sorted from
+      easiest to hardest.<br>
+      Whether you're seeking to improve your gameplay skills, see the difficulty of a particular level,
+      or simply looking for fresh levels to explore, this list is your ultimate go-to resource for you.<br>
+      To get started, click one of the buttons at the top to take you to different pages!&nbsp;</p>
+    <br>
+    <p class="warning"
+      style="padding-top: .5%; font-size: 1.1vw; text-align: center; color: white; margin: 0 auto; max-width: 80vw;">
+      This website is still a work in progress!&nbsp;</p>
+    <br>
+
+    <h1 style="padding-top: .5%; font-size: 2vw; text-align: center; color: white;">EPL Team Members:</h1>
+    <div class="team-member">
+      <img class="pfp" src="Images/Members/Mystifyre.png" alt="Profile Picture">
+      <div>
+        <div class="username">Myst</div>
+        <div class="handle">@mystifyre</div>
+        <div class="action">Primary site owner, programmer, and level-ranker.</div>
+      </div>
+    </div>
+    <div class="team-member">
+      <img class="pfp" src="Images/Members/frost.png" alt="Profile Picture">
+      <div>
+        <div class="username">frost</div>
+        <div class="handle">@frost7436</div>
+        <div class="action">Responsible for the majority of the site's design.</div>
+      </div>
+    </div>
+    <div class="team-member">
+      <img class="pfp" src="Images/Members/watglan.png" alt="Profile Picture">
+      <div>
+        <div class="username">watglan</div>
+        <div class="handle">@theegglet.</div>
+        <div class="action">Assistant programmer and level ranker. </div>
+      </div>
+    </div>
+    <div class="team-member">
+      <img class="pfp" src="Images/Members/smalism.png" alt="Profile Picture">
+      <div>
+        <div class="username">smalism</div>
+        <div class="handle">@smalism</div>
+        <div class="action">Assistant programmer.</div>
+      </div>
+    </div>
+    <div class="team-member">
+      <img class="pfp" src="Images/Members/audigamer.png" alt="Profile Picture">
+      <div>
+        <div class="username">audigamer</div>
+        <div class="handle">@audigamer</div>
+        <div class="action">Assistant level ranker.</div>
+      </div>
+    </div>
+
+    <span style="font-size: 3vw">&nbsp;</span>
+    <script src="Pages/JavaScript/script.js"></script>
+  </div>
+</body>
+
+</html>

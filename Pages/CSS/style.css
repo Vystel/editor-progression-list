@@ -1,0 +1,287 @@
+/* Reset */
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+body, button {
+  font-family: 'Abel', sans-serif;
+}
+
+/* Default styles */
+* {
+  font-size: 1vw;
+  padding-top: 0.5%;
+}
+
+/* Headings */
+h1 {
+  font-size: 1.5vw;
+}
+h2 {
+  font-size: 1.2vw;
+}
+
+/* Background */
+body {
+  background-image: url('/Images/UI/BG.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+/* Header */
+.header {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  height: 3vw;
+  padding: 0.5vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Main Text */
+p.main {
+  text-align: center;
+  color: white;
+}
+
+/* Logo Animation */
+.logo {
+  width: 40%;
+  display: block;
+  margin: 0 auto;
+  animation: move 2s ease-in-out infinite alternate;
+}
+@keyframes move {
+  from {
+    transform: rotate(-10deg);
+  }
+  to {
+    transform: rotate(10deg);
+  }
+}
+
+/* Default Button Elements */
+.button-container {
+  margin: auto;
+  text-align: center;
+}
+/* Categories and Tabcontent */
+.header-button-container, .tabcontent {
+  padding-top: 0;
+  margin: auto;
+  text-align: center;
+}
+.button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  width: 8vw;
+  height: 3vw;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0;
+  margin-right: 0.5vw;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.14);
+  transition: transform 0.2s ease, text-shadow 0.2s ease;
+}
+.button:hover {
+  text-shadow: 0px 0px 8px rgba(255, 255, 255, 1);
+  transform: scale(1.05);
+  cursor: pointer;
+}
+.button.active {
+  text-shadow: 0px 0px 4px rgba(0, 0, 0, 1), 0px 0px 8px rgba(0, 0, 0, 1), 0px 0px 16px rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s ease, text-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+/* Header and Footer Buttons */
+.header-button {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.header-button:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+.header-button:active {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Current Page Button */
+.current {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.current:hover {
+  cursor: auto;
+  transform: scale(1);
+  text-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.current.active {
+  text-shadow: 0px 0px 0px rgba(0, 0, 0, 0), 0px 0px 0px rgba(0, 0, 0, 0), 0px 0px 0px rgba(0, 0, 0, 0);
+  transition: transform 0.2s ease, text-shadow 0.2s ease, background-color 0.2s ease;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.scroll {
+  position: absolute;
+  left: 95.5vw;
+  opacity: 0.25
+}
+.home, .search, .random, .scroll {
+  width: 3vw;
+}
+.button img {
+  vertical-align: middle;
+}
+
+.discord:active {
+  background: rgba(138, 156, 254, 1);
+  transition: background-color 0.2s ease;
+}
+.discord:hover {
+  background: rgba(138, 156, 254, 0.2);
+  transition: background-color 0.2s ease;
+}
+.twhgedit:active {
+  background: rgba(255, 0, 0, 1);
+  transition: background-color 0.2s ease;
+}
+.twhgedit:hover {
+  background: rgba(255, 0, 0, 0.2);
+  transition: background-color 0.2s ease;
+}
+
+/* Level Image */
+.levelImage {
+  outline: 0.25vw solid white;
+  padding: 0;
+  transition: all 0.2s ease-in-out;
+  border-radius: 1vw;
+}
+.levelImage:hover {
+  transform: scale(1.05);
+
+  cursor: pointer;
+}
+
+/* Warning Text Flash */
+.warning {
+  animation: color-change 4s infinite;
+}
+@keyframes color-change {
+  0% { color: red; }
+  50% { color: white; }
+  100% { color: red; }
+}
+
+/* Scrollbars */
+/* Webkit (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background: #252525;
+}
+
+::-webkit-scrollbar-thumb {
+  background: lightgray; 
+  border-radius: 10px;
+  outline: 2px solid black;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: darkgray; 
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: gray; 
+}
+
+/* Edge */
+::-ms-scrollbar {
+  width: 20px;
+}
+
+::-ms-scrollbar-track {
+  background: #252525;
+}
+
+::-ms-scrollbar-thumb {
+  background: lightgray; 
+  border-radius: 10px;
+  outline: 2px solid black;
+}
+
+::-ms-scrollbar-thumb:hover {
+  background: lightgray; 
+}
+
+::-ms-scrollbar-thumb:active {
+  background: lightgray; 
+}
+
+/* Firefox */
+::-moz-scrollbar {
+  width: 20px;
+}
+
+::-moz-scrollbar-track {
+  background: #252525;
+}
+
+::-moz-scrollbar-thumb {
+  background: lightgray; 
+  border-radius: 10px;
+  outline: 2px solid black;
+}
+
+::-moz-scrollbar-thumb:hover {
+  background: lightgray; 
+}
+
+::-moz-scrollbar-thumb:active {
+  background: lightgray; 
+}
+
+/* Team Member */
+.team-member {
+  display: flex;
+  align-items: center;
+  margin: 0.5vw 0;
+  margin-left: 37vw;
+}
+
+.pfp {
+  width: 4vw;
+  height: 4vw;
+  border-radius: 50%;
+  margin-right: 1vw;
+}
+
+.username {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+.handle {
+  color: gray;
+}
+
+.action {
+  color: white;
+}

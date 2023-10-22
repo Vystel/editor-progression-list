@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Editor Progression List</title>
+  <link href="../CSS/style.css" rel="stylesheet" type="text/css" />
+  <link href="../CSS/mappack.css" rel="stylesheet" type="text/css" />
+  <link rel="shortcut icon" href="/Images/EPLwebsiteLogo.ico" type="image/x-icon">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <div class="scrollable-container">
+
+    <!-- The header section contains a dropdown menu for the user to navigate between pages -->
+    <div class="header">
+      <div class="button-container nopad">
+        <a href="./levels.html"><button class="button levels">Levels</button></a>
+        <a href="./search.html"><button class="button search">Search</button></a>
+        <a href="/index.html"><button class="button home">Home</button></a>
+      </div>
+      <div style="position: absolute; top: 0; left: 50;">
+        <button type="discord" class="button discord" style="width: 3vw; height: 3vw;"
+          onclick="window.open('https://discord.gg/AagvaDSfT4', '_blank')" title="Join TWHG Discord Server">
+          <img src="/Images/Discord.png" alt="Discord Link" style="width: 3vw; height: 3vw">
+        </button>
+        <button type="twhgedit" class="button twhgedit" style="width: 3vw; height: 3vw;"
+          onclick="window.open('https://twhgedit.netlify.app', '_blank')" title="Visit TWHG Editor">
+          <img src="/Images/twhgedit.png" alt="TWHG Editor" style="width: 3vw; height: 3vw">
+        </button>
+        <button type="twhgedit2" class="button twhgedit" style="width: 3vw; height: 3vw;"
+          onclick="window.open('https://twhgedit2.netlify.app', '_blank')" title="Visit TWHG Editor 2">
+          <img src="/Images/twhgedit2.png" alt="TWHG Editor 2" style="width: 3vw; height: 3vw">
+        </button>
+        <button type="twhgedit3" class="button twhgedit" style="width: 3vw; height: 3vw;"
+          onclick="window.open('https://abho.itch.io/twhg-ue', '_blank')" title="Download TWHG Editor 3">
+          <img src="/Images/twhgedit3.png" alt="TWHG Editor 3" style="width: 3vw; height: 3vw">
+        </button>
+      </div>
+    </div>
+
+    <!-- Logo -->
+    <span style="font-size: 3vw">&nbsp;</span>
+    <img src="/Images/logo.png" alt="EPL Logo" class="logo">
+
+    <!-- Title of the page -->
+    <h1>Select a Map Pack:</h1>
+
+    <!-- Create a dropdown select element to choose the map pack -->
+    <div class="dropdown-container">
+      <select id="mapPackSelect" onchange="displayLevelsFromPack()" class="MapPacksDropdown">
+        <option value="">Select a map pack</option>
+        <option value="Winter Pack">Winter Pack</option>
+        <option value="Other Map Pack">Other Map Pack</option>
+      </select>
+    </div>
+    <div id="levelTab"></div>
+    <div style="text-align: center;">
+        <button type="twhgedit" class="button twhgedit" style="width: 5vw; height: 5vw;"
+          onclick="window.open('https://twhgedit.netlify.app', '_blank')">
+          <img src="/Images/twhgedit.png" alt="TWHG Editor" style="width: 4vw; height: 4vw">
+        </button>
+        <button type="twhgedit2" class="button twhgedit" style="width: 5vw; height: 5vw;"
+          onclick="window.open('https://twhgedit2.netlify.app', '_blank')">
+          <img src="/Images/twhgedit2.png" alt="TWHG Editor 2" style="width: 4vw; height: 4vw">
+        </button>
+      </div>
+  </div>
+  <!-- Script -->
+  <script src="../JavaScript/script.js"></script>
+  <script src="../JavaScript/mappack.js"></script>
+</body>
+
+</html>

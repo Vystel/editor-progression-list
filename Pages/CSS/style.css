@@ -28,7 +28,7 @@ h2 {
 
 /* Background */
 body {
-  background-image: url('/Images/UI/BG.png');
+  background-image: url('../../Images/UI/BG.png');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;

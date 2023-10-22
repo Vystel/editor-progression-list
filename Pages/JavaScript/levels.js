@@ -377,7 +377,7 @@ function generateHTML(categories) {
       levelTitle.style.color = 'white';
 
       const levelImage = document.createElement('img');
-      levelImage.src = "/levels/images/" + level.title.replace(/\?/g, '') + ".png";
+      levelImage.src = "../../levels/images/" + level.title.replace(/\?/g, '') + ".png";
       levelImage.style.width = "15vw";
       levelImage.style.height = "15vw";
       levelImage.classList.add('levelImage');
@@ -459,7 +459,7 @@ function toggleAllCategories() {
 
 function copyLevel(levelName) {
   levelName = levelName.replace(/\?/g, '');
-  fetch("/levels/codes/" + String(levelName) + ".txt")
+  fetch("../../levels/codes/" + String(levelName) + ".txt")
     .then(response => {
       if (!response.ok) {
         throw new Error('Network response was not ok.');
@@ -472,7 +472,7 @@ function copyLevel(levelName) {
           alert('Level Code copied to clipboard!');
         })
         .catch(error => {
-          window.open("/levels/codes/" + String(levelName) + ".txt", "_blank");
+          window.open("../../levels/codes/" + String(levelName) + ".txt", "_blank");
         });
     })
     .catch(error => {

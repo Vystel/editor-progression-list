@@ -24,6 +24,7 @@ window.addEventListener('scroll', function() {
     }
 });
 
+/*
 window.addEventListener('scroll', () => {
   const scrollPosition = window.scrollY;
   const viewportHeight = window.innerHeight;
@@ -42,3 +43,4 @@ window.addEventListener('scroll', () => {
     levelContainer.style.transform = `scale(${scale})`;
   });
 });
+*/

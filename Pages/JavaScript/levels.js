@@ -101,7 +101,7 @@ const categories = [
   {
     id: "Easy",
     color: "138, 255, 126",
-    description: "This is pretty difficult for first-time players but are easy for most players.",
+    description: "While first-time players might find these levels somewhat challenging, it's a breeze for most players.",
     levels: [
       {
         title: "Quartet",
@@ -160,7 +160,7 @@ const categories = [
   {
     id: "Medium",
     color: "247, 255, 126",
-    description: "First time players would not be able to beat these levels. For people who are good at the game this would be a fun enjoyable experience; not too hard, not too easy.",
+    description: "Beginners will struggle with these levels, but for skilled players, they offer an enjoyable experience that strikes a balance between not too difficult and not too easy.",
     levels: [
       {
         title: "Segment 5",
@@ -287,7 +287,7 @@ const categories = [
   {
     id: "Hard",
     color: "255, 191, 126",
-    description: "Most normal players will struggle a bit on these levels.",
+    description: "The majority of regular players will face a considerable challenge with these levels.",
     levels: [
       {
         title: "Plasteel",
@@ -305,28 +305,28 @@ const categories = [
   {
     id: "Brutal",
     color: "255, 124, 183",
-    description: "These levels are the pinnicle of difficulty for most normal players.",
+    description: "These levels are the pinnicle of difficulty for the average player, requiring even experienced players to put in some serious time and effort.",
     levels: [
     ]
   },
   {
     id: "Extreme",
     color: "152, 72, 100",
-    description: "These levels are extremely difficult to even more experienced players.",
+    description: "Even more experienced players will find these levels exceptionally challenging.",
     levels: [
     ]
   },
   {
     id: "Insane",
     color: "130, 130, 130",
-    description: "This category is not for the light-hearted. For even the most professional players these levels require huge amounts of time and effort to complete.",
+    description: "This category is not for the light-hearted. Even the most skilled players will need extensive time and effort to conquer these levels.",
     levels: [
     ]
   },
   {
     id: "Mythical",
     color: "",
-    description: "The levels in this category are almost impossible. Good Luck.",
+    description: "The levels in this category are almost humanly impossible. Good Luck.",
     levels: [
     ]
   },

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Editor Progression List</title>
+  <link href="../CSS/style.css" rel="stylesheet" type="text/css" />
+  <link href="../CSS/levels.css" rel="stylesheet" type="text/css" />
+  <link rel="shortcut icon" href="../../Images/EPLwebsiteLogo.ico" type="image/x-icon">
+  <meta property="og:title" content="Editor Progression List">
+  <meta property="og:description" content="On this website, you'll discover a selection of high-quality levels made using abho's World's Hardest Game level editor, sorted from easiest to hardest.">
+  <meta property="og:image" content="https://i.ibb.co/djrqpx5/logo-2.png">
+  <meta property="og:url" content="editor-progression-list.mystifyre.repl.co">
+  <meta property="og:type" content="website">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <div>
+    <div class="header">
+      <div class="button-container">
+        <button class="button square discord header-left" onclick="window.open('https://discord.gg/AagvaDSfT4', '_blank')" title="Join TWHG Discord Server">
+          <img src="Images/UI/Discord.png" alt="Discord Link" class="icon">
+        </button>
+        <button class="button square twhgedit header-left" onclick="window.open('https://twhgedit.netlify.app', '_blank')" title="Visit TWHG Editor">
+          <img src="Images/UI/TWHGEdit.png" alt="TWHG Editor" class="icon">
+        </button>
+        <button class="button square twhgedit2 header-left" onclick="window.open('https://twhgedit2.netlify.app', '_blank')" title="Visit TWHG Editor 2">
+          <img src="Images/UI/TWHGEdit2.png" alt="TWHG Editor 2" class="icon">
+        </button>
+        <button class="button square twhgedit3 header-left" onclick="window.open('https://abho.itch.io/twhg-ue', '_blank')" title="Download TWHG Editor 3">
+          <img src="Images/UI/TWHGEdit3.png" alt="TWHG Editor 3" class="icon">
+        </button>
+        <a href="../../index.html">
+          <button class="button square header-button">
+            <img src="../../Images/UI/Home.png" alt="Home" class="icon">
+          </button>
+        </a>
+        <button class="button header-button current">Levels</button></a>
+        <a href="./search.html">
+          <button class="button square header-button">
+            <img src="../../Images/UI/Search.png" alt="Search" class="icon">
+          </button>
+        </a>
+        <a href="./random.html">
+          <button class="button square header-button">
+            <img src="../../Images/UI/Random.png" alt="Random" class="icon">
+          </button>
+        </a>
+        <button id="scrollToTopButton" class="button square header-button header-right">^</button>
+      </div>
+    </div>
+
+    <img src="../../Images/UI/Logo.png" alt="EPL Logo" class="logo">
+    <div class="button-container">
+      <p class="warning">
+        Remember: The difficulty rankings on this page are subjective and may vary depending 
+        on your skill level. We recommend playing these levels without using pause buffering 
+        for the intended experience.
+      </p>
+      
+      <div>&nbsp;</div>
+
+      <p style="font-weight: bold;">Instructions:</p>
+      <p>
+        Click on a difficulty to open up it's category full of levels.<br>
+        The levels in each difficulty category are sorted by difficulty in a left-to-right, top-to-bottom order.<br>
+        Click a level image to copy it's level data, right click to mark the level as completed.
+      </p>
+      
+      <p id="level-count">
+      </p>
+
+      <div>&nbsp;</div>
+
+      <p style="font-weight: bold;">Stack Categories?</p>
+      <p>(This will simultaneously expand all categories, allowing you to simply click on a difficulty button to quickly scroll to that specific category.)</p>
+      <label class="switch">
+        <input type="checkbox">
+        <span class="slider round"></span>
+      </label>
+    </div>
+
+    <div>&nbsp;</div>
+
+    <div class="button-container">
+      <button class="button effortless" id="effortlessBtn">Effortless</button>
+      <button class="button trivial" id="trivialBtn">Trivial</button>
+      <button class="button easy" id="easyBtn">Easy</button>
+      <button class="button medium" id="mediumBtn">Medium</button>
+      <button class="button hard" id="hardBtn">Hard</button>
+      <button class="button challenging" id="challengingBtn">Challenging</button>
+      <button class="button brutal" id="brutalBtn">Brutal</button>
+      <button class="button extreme" id="extremeBtn">Extreme</button>
+      <button class="button insane" id="insaneBtn">Insane</button>
+      <button class="button mythical" id="mythicalBtn">Mythical</button>
+    </div>
+    <div class="container">
+      <div id="Effortless" class="tabcontent"></div>
+      <div id="Trivial" class="tabcontent"></div>
+      <div id="Easy" class="tabcontent"></div>
+      <div id="Medium" class="tabcontent"></div>
+      <div id="Hard" class="tabcontent"></div>
+      <div id="Challenging" class="tabcontent"></div>
+      <div id="Brutal" class="tabcontent"></div>
+      <div id="Extreme" class="tabcontent"></div>
+      <div id="Insane" class="tabcontent"></div>
+      <div id="Mythical" class="tabcontent"
+        style="background: linear-gradient(180deg, rgba(138,188,249,0.2) 0%, rgba(162,252,216,0.2) 50%, rgba(199,123,247,0.2) 100%);">
+      </div>
+    </div>
+    <div>&nbsp;</div>
+    <script src="../JavaScript/levels.js"></script>
+    <script src="../JavaScript/script.js"></script>
+  </div>
+</body>
+
+</html>

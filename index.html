@@ -16,66 +16,57 @@
 </head>
 
 <body>
-  <div class="scrollable-container">
+  <div>
     <div class="header">
-      <div class="header-button-container">
-        <button class="button home current">
-          <img src="Images/UI/Home.png" alt="Home" style="width: 2vw; height: 2vw">
+      <div class="button-container">
+        <button class="button square discord header-left" onclick="window.open('https://discord.gg/AagvaDSfT4', '_blank')" title="Join TWHG Discord Server">
+          <img src="Images/UI/Discord.png" alt="Discord Link" class="icon">
         </button>
-        <a href="Pages/HTML/levels.html"><button class="button levels header-button">Levels</button></a>
+        <button class="button square twhgedit header-left" onclick="window.open('https://twhgedit.netlify.app', '_blank')" title="Visit TWHG Editor">
+          <img src="Images/UI/TWHGEdit.png" alt="TWHG Editor" class="icon">
+        </button>
+        <button class="button square twhgedit2 header-left" onclick="window.open('https://twhgedit2.netlify.app', '_blank')" title="Visit TWHG Editor 2">
+          <img src="Images/UI/TWHGEdit2.png" alt="TWHG Editor 2" class="icon">
+        </button>
+        <button class="button square twhgedit3 header-left" onclick="window.open('https://abho.itch.io/twhg-ue', '_blank')" title="Download TWHG Editor 3">
+          <img src="Images/UI/TWHGEdit3.png" alt="TWHG Editor 3" class="icon">
+        </button>
+        <button class="button square header-button current">
+          <img src="Images/UI/Home.png" alt="Home" class="icon">
+        </button>
+        <a href="Pages/HTML/levels.html"><button class="button header-button">Levels</button></a>
         <a href="Pages/HTML/search.html">
-          <button class="button search header-button">
-            <img src="Images/UI/Search.png" alt="Search" style="width: 2vw; height: 2vw">
+          <button class="button square header-button">
+            <img src="Images/UI/Search.png" alt="Search" class="icon">
           </button>
         </a>
         <a href="Pages/HTML/random.html">
-          <button class="button random header-button">
-            <img src="Images/UI/Random.png" alt="Random" style="width: 2vw; height: 2vw">
+          <button class="button square header-button">
+            <img src="Images/UI/Random.png" alt="Random" class="icon">
           </button>
         </a>
-        <button id="scrollToTopButton" class="button scroll header-button">^</button>
-      </div>
-      <div style="position: absolute; top: 0; left: 50;">
-        <button type="discord" class="button discord" style="width: 3vw; height: 3vw;"
-          onclick="window.open('https://discord.gg/AagvaDSfT4', '_blank')" title="Join TWHG Discord Server">
-          <img src="Images/UI/Discord.png" alt="Discord Link" style="width: 3vw; height: 3vw">
-        </button>
-        <button type="twhgedit" class="button twhgedit" style="width: 3vw; height: 3vw;"
-          onclick="window.open('https://twhgedit.netlify.app', '_blank')" title="Visit TWHG Editor">
-          <img src="Images/UI/TWHGEdit.png" alt="TWHG Editor" style="width: 3vw; height: 3vw">
-        </button>
-        <button type="twhgedit2" class="button twhgedit" style="width: 3vw; height: 3vw;"
-          onclick="window.open('https://twhgedit2.netlify.app', '_blank')" title="Visit TWHG Editor 2">
-          <img src="Images/UI/TWHGEdit2.png" alt="TWHG Editor 2" style="width: 3vw; height: 3vw">
-        </button>
-        <button type="twhgedit3" class="button twhgedit" style="width: 3vw; height: 3vw;"
-          onclick="window.open('https://abho.itch.io/twhg-ue', '_blank')" title="Download TWHG Editor 3">
-          <img src="Images/UI/TWHGEdit3.png" alt="TWHG Editor 3" style="width: 3vw; height: 3vw">
-        </button>
+        <button id="scrollToTopButton" class="button square header-button header-right">^</button>
       </div>
     </div>
 
-    <span style="font-size: 3vw">&nbsp;</span>
-
     <img src="Images/UI/Logo.png" alt="EPL Logo" class="logo">
-    <p style="padding-top: .5%; font-size: 1.1vw; text-align: center; color: white; margin: 0 auto; max-width: 80vw;">
+    <p>
       Welcome to the Editor Progression List (EPL) for the World's Hardest Game!<br>
       On this website, you'll discover a selection of high-quality levels made using abho's level editor, sorted from easiest to hardest.<br>
       Whether you're seeking to improve your gameplay skills, see the difficulty of a particular level, or simply looking for fresh levels to explore, this list is your ultimate go-to resource for you.<br>
-      To get started, click one of the buttons at the top to take you to different pages!&nbsp;</p>
-    <br>
-    <p class="warning"
-      style="padding-top: .5%; font-size: 1.1vw; text-align: center; color: white; margin: 0 auto; max-width: 80vw;">
-      This website is still a work in progress!&nbsp;</p>
-    <br>
+      To get started, click one of the buttons at the top to take you to different pages!
+    </p>
+    <p class="warning">
+      This website is still a work in progress!
+    </p>
 
-    <h1 style="padding-top: .5%; font-size: 2vw; text-align: center; color: white;">EPL Team Members:</h1>
+    <h1 class="team-title">EPL Team Members:</h1>
     <div class="team-member">
       <img class="pfp" src="Images/Members/Mystifyre.png" alt="Profile Picture">
       <div>
         <div class="username">Myst</div>
         <div class="handle">@mystifyre</div>
-        <div class="action">Primary site owner and programmer.</div>
+        <div class="action">Primary website owner and programmer.</div>
       </div>
     </div>
     <div class="team-member">
@@ -83,7 +74,7 @@
       <div>
         <div class="username">frost</div>
         <div class="handle">@frost7436</div>
-        <div class="action">Responsible for the majority of the site's design.</div>
+        <div class="action">Made the majority of the website's design.</div>
       </div>
     </div>
     <div class="team-member">
@@ -102,12 +93,11 @@
         <div class="action">Assistant programmer.</div>
       </div>
     </div>
-    <p class="warning"
-      style="padding-top: .5%; font-size: 1.1vw; text-align: center; color: white; margin: 0 auto; max-width: 80vw;">
-      Level Rankers wanted!</p>
-    <br>
+    <p class="warning">
+      Level Rankers wanted!
+    </p>
 
-    <span style="font-size: 3vw">&nbsp;</span>
+    <div>&nbsp;</div>
     <script src="Pages/JavaScript/script.js"></script>
   </div>
 </body>

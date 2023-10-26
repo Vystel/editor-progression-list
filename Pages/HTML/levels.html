@@ -17,70 +17,72 @@
 </head>
 
 <body>
-  <div class="scrollable-container">
+  <div>
     <div class="header">
-      <div class="header-button-container">
+      <div class="button-container">
+        <button class="button square discord header-left" onclick="window.open('https://discord.gg/AagvaDSfT4', '_blank')" title="Join TWHG Discord Server">
+          <img src="Images/UI/Discord.png" alt="Discord Link" class="icon">
+        </button>
+        <button class="button square twhgedit header-left" onclick="window.open('https://twhgedit.netlify.app', '_blank')" title="Visit TWHG Editor">
+          <img src="Images/UI/TWHGEdit.png" alt="TWHG Editor" class="icon">
+        </button>
+        <button class="button square twhgedit2 header-left" onclick="window.open('https://twhgedit2.netlify.app', '_blank')" title="Visit TWHG Editor 2">
+          <img src="Images/UI/TWHGEdit2.png" alt="TWHG Editor 2" class="icon">
+        </button>
+        <button class="button square twhgedit3 header-left" onclick="window.open('https://abho.itch.io/twhg-ue', '_blank')" title="Download TWHG Editor 3">
+          <img src="Images/UI/TWHGEdit3.png" alt="TWHG Editor 3" class="icon">
+        </button>
         <a href="../../index.html">
-          <button class="button home header-button">
-            <img src="../../Images/UI/Home.png" alt="Home" style="width: 2vw; height: 2vw">
+          <button class="button square header-button">
+            <img src="../../Images/UI/Home.png" alt="Home" class="icon">
           </button>
         </a>
-        <button class="button levels current">Levels</button>
+        <button class="button header-button current">Levels</button></a>
         <a href="./search.html">
-          <button class="button search header-button">
-            <img src="../../Images/UI/Search.png" alt="Search" style="width: 2vw; height: 2vw">
+          <button class="button square header-button">
+            <img src="../../Images/UI/Search.png" alt="Search" class="icon">
           </button>
         </a>
         <a href="./random.html">
-          <button class="button random header-button">
-            <img src="../../Images/UI/Random.png" alt="Random" style="width: 2vw; height: 2vw">
+          <button class="button square header-button">
+            <img src="../../Images/UI/Random.png" alt="Random" class="icon">
           </button>
         </a>
-        <button id="scrollToTopButton" class="button scroll header-button">^</button>
-      </div>
-      <div style="position: absolute; top: 0; left: 50;">
-        <button type="discord" class="button discord" style="width: 3vw; height: 3vw;"
-          onclick="window.open('https://discord.gg/AagvaDSfT4', '_blank')" title="Join TWHG Discord Server">
-          <img src="../../Images/UI/Discord.png" alt="Discord Link" style="width: 3vw; height: 3vw">
-        </button>
-        <button type="twhgedit" class="button twhgedit" style="width: 3vw; height: 3vw;"
-          onclick="window.open('https://twhgedit.netlify.app', '_blank')" title="Visit TWHG Editor">
-          <img src="../../Images/UI/TWHGEdit.png" alt="TWHG Editor" style="width: 3vw; height: 3vw">
-        </button>
-        <button type="twhgedit2" class="button twhgedit" style="width: 3vw; height: 3vw;"
-          onclick="window.open('https://twhgedit2.netlify.app', '_blank')" title="Visit TWHG Editor 2">
-          <img src="../../Images/UI/TWHGEdit2.png" alt="TWHG Editor 2" style="width: 3vw; height: 3vw">
-        </button>
-        <button type="twhgedit3" class="button twhgedit" style="width: 3vw; height: 3vw;"
-          onclick="window.open('https://abho.itch.io/twhg-ue', '_blank')" title="Download TWHG Editor 3">
-          <img src="../../Images/UI/TWHGEdit3.png" alt="TWHG Editor 3" style="width: 3vw; height: 3vw">
-        </button>
+        <button id="scrollToTopButton" class="button square header-button header-right">^</button>
       </div>
     </div>
 
-    <span style="font-size: 3vw">&nbsp;</span>
-
     <img src="../../Images/UI/Logo.png" alt="EPL Logo" class="logo">
     <div class="button-container">
-      <p class="warning"
-        style="padding-top: .5%; font-size: 1.1vw; text-align: center; color: white; margin: 0 auto; max-width: 80vw;">
-        Remember: Please keep in mind that the levels ranked by difficulty on the page are subjective and may differ
-        based on individual skill levels. It is suggested to play these levels without pause buffering for the intended
-        experience.</p>
-      <p style="padding-top: .5%; font-size: 1.1vw; text-align: center; color: white; margin: 0 auto; max-width: 80vw;">
-        The levels in each of the categories are sorted in a left-to-right, top-to-bottom order.</p>
-      <p style="padding-top: .5%; font-size: 1.1vw; text-align: center; color: white; margin: 0 auto; max-width: 80vw;">
-        Right click a level to mark it as completed.</p>
-      <p id="level-count" style="padding-top: .5%; font-size: 1.1vw; text-align: center; color: white; margin: 0 auto;">
+      <p class="warning">
+        Remember: The difficulty rankings on this page are subjective and may vary depending 
+        on your skill level. We recommend playing these levels without using pause buffering 
+        for the intended experience.
       </p>
-      <h1 style="padding-top: .5%; font-size: 1vw; text-align: center; color: white;">Stack Categories?</h1>
+      
+      <div>&nbsp;</div>
+
+      <p style="font-weight: bold;">Instructions:</p>
+      <p>
+        Click on a difficulty to open up it's category full of levels.<br>
+        The levels in each difficulty category are sorted by difficulty in a left-to-right, top-to-bottom order.<br>
+        Click a level image to copy it's level data, right click to mark the level as completed.
+      </p>
+      
+      <p id="level-count">
+      </p>
+
+      <div>&nbsp;</div>
+
+      <p style="font-weight: bold;">Stack Categories?</p>
+      <p>(This will simultaneously expand all categories, allowing you to simply click on a difficulty button to quickly scroll to that specific category.)</p>
       <label class="switch">
         <input type="checkbox">
         <span class="slider round"></span>
       </label>
     </div>
 
-    <span style="font-size: 1vw">&nbsp;</span>
+    <div>&nbsp;</div>
 
     <div class="button-container">
       <button class="button effortless" id="effortlessBtn">Effortless</button>
@@ -107,12 +109,11 @@
       <div id="Mythical" class="tabcontent"
         style="background: linear-gradient(180deg, rgba(138,188,249,0.2) 0%, rgba(162,252,216,0.2) 50%, rgba(199,123,247,0.2) 100%);">
       </div>
-      <br>
-
-      <script src="../JavaScript/levels.js"></script>
-      <script src="../JavaScript/script.js"></script>
-
     </div>
+    <div>&nbsp;</div>
+    <script src="../JavaScript/levels.js"></script>
+    <script src="../JavaScript/script.js"></script>
+  </div>
 </body>
 
 </html>

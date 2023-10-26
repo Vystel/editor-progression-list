@@ -101,7 +101,7 @@ const categories = [
   {
     id: "Easy",
     color: "138, 255, 126",
-    description: "While first-time players might find these levels somewhat challenging, it's a breeze for most players.",
+    description: "While beginners might find these levels somewhat challenging, they are a walk in the park for the majority of players.",
     levels: [
       {
         title: "Quartet",
@@ -347,6 +347,8 @@ function generateHTML(categories) {
     tabTitle.innerHTML = id;
     tabTitle.style.lineHeight = 1.2;
     tabTitle.style.margin = 0;
+    tabTitle.style.color = 'black';
+    tabTitle.style.fontSize = '1.5vw';
 
     if (id == 'Mythical') tabTitle.style.background = 'linear-gradient(180deg, rgba(138,188,249,1) 0%, rgba(162,252,216,1) 50%, rgba(199,123,247,1) 100%)';
     else tabTitle.style.backgroundColor = `rgba(${color}, 1)`;
@@ -355,6 +357,8 @@ function generateHTML(categories) {
     tabDesc.innerHTML = description;
     tabDesc.style.margin = 0;
     tabDesc.style.paddingBottom = '.5%';
+    tabDesc.style.maxWidth = 'none';
+    tabDesc.style.color = 'black';
 
     tabContent.appendChild(tabTitle);
     tabTitle.appendChild(tabDesc);
@@ -377,7 +381,7 @@ function generateHTML(categories) {
       levelTitle.style.color = 'white';
 
       const levelImage = document.createElement('img');
-      levelImage.src = "../../levels/images/" + level.title.replace(/\?/g, '') + ".png";
+      levelImage.src = "../../Levels/Images/" + level.title.replace(/\?/g, '') + ".png";
       levelImage.style.width = "15vw";
       levelImage.style.height = "15vw";
       levelImage.classList.add('levelImage');
@@ -386,6 +390,8 @@ function generateHTML(categories) {
       const levelCreator = document.createElement('p');
       levelCreator.innerHTML = 'By ' + level.creator;
       levelCreator.style.color = 'white';
+      levelCreator.style.marginTop = '1vw';
+      levelCreator.style.marginBottom = '1vw';
 
       levelContainer.appendChild(levelTitle);
       levelContainer.appendChild(levelImage);
@@ -459,7 +465,7 @@ function toggleAllCategories() {
 
 function copyLevel(levelName) {
   levelName = levelName.replace(/\?/g, '');
-  fetch("../../levels/codes/" + String(levelName) + ".txt")
+  fetch("../../Levels/Codes/" + String(levelName) + ".txt")
     .then(response => {
       if (!response.ok) {
         throw new Error('Network response was not ok.');
@@ -472,7 +478,7 @@ function copyLevel(levelName) {
           alert('Level Code copied to clipboard!');
         })
         .catch(error => {
-          window.open("../../levels/codes/" + String(levelName) + ".txt", "_blank");
+          window.open("../../Levels/Codes/" + String(levelName) + ".txt", "_blank");
         });
     })
     .catch(error => {
@@ -544,8 +550,6 @@ document.querySelectorAll('.levelImage').forEach((levelImage) => {
 const levelCount = categories.reduce((count, category) => {
   return count + category.levels.length;
 }, 0);
-
-levelCountDiv.textContent = `There is currently a total of ${levelCount} levels in this list.`;
 
 effortlessBtn.addEventListener('click', function() {
   scrollToCategoryWithCheckbox('Effortless');

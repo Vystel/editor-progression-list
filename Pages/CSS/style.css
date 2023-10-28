@@ -295,9 +295,12 @@ input[type="text"]:focus {
 .separator {
   margin-top: 5px;
   margin-bottom: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin-left: 50%;
+  margin-right: auto;
+}
+
+.separator img {
+  width: 40%;
 }
 
 /* Scrollbar */

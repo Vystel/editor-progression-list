@@ -23,6 +23,8 @@ p {
 h1 {
   font-size: 30px;
   padding-top: .5%; 
+  margin-top: 30px;
+  margin-bottom: -10px;
   text-align: center; 
   color: white;
 }
@@ -104,7 +106,10 @@ body {
   line-height: 40px;
   vertical-align: middle;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
+}
+.sidebar-links a img, .sidebar-social a img {
+  padding-left: 10px;
 }
 .sidebar-links a:hover, .sidebar-social a:hover {
   background-color: rgba(255, 255, 255, 0.1);
@@ -145,6 +150,23 @@ body {
 }
 .sidebar-closed {
   left: -250px;
+}
+.current {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.sidebar-links a.current:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: auto;
+}
+.current.active {
+  transition: transform 0.2s ease, text-shadow 0.2s ease, background-color 0.2s ease;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.icon {
+  vertical-align: middle;
+  width: 30px;
+  height: 30px;
+  padding-right: 10px;
 }
 
 /* Buttons */
@@ -189,51 +211,6 @@ body {
   border-radius: 0.1vw;*/
   transition: all 0.2s ease;
   color: black;
-}
-.header-button {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-.header-button:hover {
-  background-color: rgba(255, 255, 255, 0.25);
-}
-.header-button:active {
-  background-color: rgba(255, 255, 255, 0.5);
-}
-.current {
-  background-color: rgba(255, 255, 255, 0.5);
-}
-.current:hover {
-  cursor: auto;
-  transform: scale(1);
-  text-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
-  background-color: rgba(255, 255, 255, 0.5);
-}
-.current.active {
-  text-shadow: 0px 0px 0px rgba(0, 0, 0, 0), 0px 0px 0px rgba(0, 0, 0, 0), 0px 0px 0px rgba(0, 0, 0, 0);
-  transition: transform 0.2s ease, text-shadow 0.2s ease, background-color 0.2s ease;
-  background-color: rgba(255, 255, 255, 0.5);
-}
-.discord:active {
-  background: rgba(138, 156, 254, 1);
-  transition: background-color 0.2s ease;
-}
-.discord:hover {
-  background: rgba(138, 156, 254, 0.2);
-  transition: background-color 0.2s ease;
-}
-.twhgedit:active {
-  background: rgba(255, 0, 0, 1);
-  transition: background-color 0.2s ease;
-}
-.twhgedit:hover {
-  background: rgba(255, 0, 0, 0.2);
-  transition: background-color 0.2s ease;
-}
-.icon {
-  vertical-align: middle;
-  width: 30px;
-  height: 30px;
-  padding-right: 10px
 }
 
 /* Slider */
@@ -305,13 +282,22 @@ input[type="text"] {
   background-color: rgba(255, 255, 255, 0.1);
 }
 input[type="text"]:hover {
-    background-color: rgba(255, 255, 255, 0.13);
-    cursor: text;
+  background-color: rgba(255, 255, 255, 0.13);
+  cursor: text;
 }
 input[type="text"]:focus {
   box-shadow: rgba(70, 72, 95, 0.3) 0 12.5px 25px;
   background-color: rgba(255, 255, 255, 0.175);
   width: 308px;
+}
+
+/* Separator */
+.separator {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Scrollbar */

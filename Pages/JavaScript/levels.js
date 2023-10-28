@@ -341,22 +341,22 @@ function generateHTML(categories) {
     tabContent.style.background = `rgba(${color}, 0.2)`;
     tabContent.style.display = 'none';
     tabContent.style.textAlign = 'center';
-    tabContent.style.lineHeight = '0.7';
+    tabContent.style.lineHeight = '14px';
 
     const tabTitle = document.createElement('h1');
     tabTitle.innerHTML = id;
-    tabTitle.style.lineHeight = 1.2;
-    tabTitle.style.margin = 0;
+    tabTitle.style.lineHeight = '24px';
+    tabTitle.style.margin = '0';
     tabTitle.style.color = 'black';
-    tabTitle.style.fontSize = '1.5vw';
+    tabTitle.style.fontSize = '30px';
 
     if (id == 'Mythical') tabTitle.style.background = 'linear-gradient(180deg, rgba(138,188,249,1) 0%, rgba(162,252,216,1) 50%, rgba(199,123,247,1) 100%)';
     else tabTitle.style.backgroundColor = `rgba(${color}, 1)`;
 
     const tabDesc = document.createElement('p');
     tabDesc.innerHTML = description;
-    tabDesc.style.margin = 0;
-    tabDesc.style.paddingBottom = '.5%';
+    tabDesc.style.margin = '0';
+    tabDesc.style.paddingBottom = '10px';
     tabDesc.style.maxWidth = 'none';
     tabDesc.style.color = 'black';
 
@@ -371,8 +371,8 @@ function generateHTML(categories) {
     for (const level of levels) {
       const levelContainer = document.createElement('div');
       levelContainer.classList.add('level-container');
-      levelContainer.style.marginLeft = '3vw';
-      levelContainer.style.marginRight = '3vw';
+      levelContainer.style.marginLeft = '60px';
+      levelContainer.style.marginRight = '60px';
       levelsContainer.style.display = 'flex';
       levelsContainer.style.justifyContent = 'center';
 
@@ -382,16 +382,16 @@ function generateHTML(categories) {
 
       const levelImage = document.createElement('img');
       levelImage.src = "../../Levels/Images/" + level.title.replace(/\?/g, '') + ".png";
-      levelImage.style.width = "15vw";
-      levelImage.style.height = "15vw";
+      levelImage.style.width = "250px";
+      levelImage.style.height = "250px";
       levelImage.classList.add('levelImage');
       levelImage.addEventListener('click', () => copyLevel(level.title));
 
       const levelCreator = document.createElement('p');
       levelCreator.innerHTML = 'By ' + level.creator;
       levelCreator.style.color = 'white';
-      levelCreator.style.marginTop = '1vw';
-      levelCreator.style.marginBottom = '1vw';
+      levelCreator.style.marginTop = '20px';
+      levelCreator.style.marginBottom = '20px';
 
       levelContainer.appendChild(levelTitle);
       levelContainer.appendChild(levelImage);

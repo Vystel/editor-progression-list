@@ -17,39 +17,43 @@
 </head>
 
 <body>
-  <div>
-    <div class="header">
-      <div class="button-container">
-        <button class="button square discord header-left" onclick="window.open('https://discord.gg/AagvaDSfT4', '_blank')" title="Join TWHG Discord Server">
-          <img src="Images/UI/Discord.png" alt="Discord Link" class="icon">
-        </button>
-        <button class="button square twhgedit header-left" onclick="window.open('https://twhgedit.netlify.app', '_blank')" title="Visit TWHG Editor">
-          <img src="Images/UI/TWHGEdit.png" alt="TWHG Editor" class="icon">
-        </button>
-        <button class="button square twhgedit2 header-left" onclick="window.open('https://twhgedit2.netlify.app', '_blank')" title="Visit TWHG Editor 2">
-          <img src="Images/UI/TWHGEdit2.png" alt="TWHG Editor 2" class="icon">
-        </button>
-        <button class="button square twhgedit3 header-left" onclick="window.open('https://abho.itch.io/twhg-ue', '_blank')" title="Download TWHG Editor 3">
-          <img src="Images/UI/TWHGEdit3.png" alt="TWHG Editor 3" class="icon">
-        </button>
-        <a href="../../index.html">
-          <button class="button square header-button">
-            <img src="../../Images/UI/Home.png" alt="Home" class="icon">
-          </button>
-        </a>
-        <a href="./levels.html"><button class="button header-button">Levels</button></a>
-        <a href="./search.html">
-          <button class="button square header-button">
-            <img src="../../Images/UI/Search.png" alt="Search" class="icon">
-          </button>
-        </a>
-        <button class="button square header-button current">
-          <img src="../../Images/UI/Random.png" alt="Random" class="icon">
-        </button>
-        <button id="scrollToTopButton" class="button square header-button header-right">^</button>
-      </div>
+  <div class="sidebar">
+    <div class="sidebar-links">
+      <a href="../../index.html" class="icon-link">
+        <img src="../../Images/UI/Home.png" class="icon">
+        Home
+      </a>
+      <a href="./levels.html">Levels</a>
+      <a href="./search.html" class="icon-link">
+        <img src="../../Images/UI/Search.png" class="icon">
+        Search
+      </a>
+      <a class="icon-link current">
+        <img src="../../Images/UI/Random.png" class="icon">
+        Random
+      </a>
     </div>
-
+    <div class="sidebar-social">
+      <a href="https://discord.gg/AagvaDSfT4" class="icon-link" target="_blank">
+        <img src="../../Images/UI/Discord.png" class="icon">
+        TWHG Discord Server
+      </a>
+      <a href="https://twhgedit.netlify.app" class="icon-link" target="_blank">
+        <img src="../../Images/UI/TWHGEdit.png" class="icon">
+        TWHG Editor 1
+      </a>
+      <a href="https://twhgedit2.netlify.app" class="icon-link" target="_blank">
+        <img src="../../Images/UI/TWHGEdit2.png" class="icon">
+        TWHG Editor 2
+      </a>
+      <a href="https://abho.itch.io/twhg-ue" class="icon-link" target="_blank">
+        <img src="../../Images/UI/TWHGEdit3.png" class="icon">
+        TWHG Editor 3
+      </a>
+    </div>
+  </div>
+  <button class="toggle-sidebar" onclick="toggleSidebar()">></button>
+  <div class="content">
     <img src="../../Images/UI/Logo.png" alt="EPL Logo" class="logo">
     <p style="font-weight: bold;">Press the button below to play a random level!</p>
 
@@ -65,6 +69,7 @@
 
     <script src="../JavaScript/random.js"></script>
     <script src="../JavaScript/levels.js"></script>
+    <script src="../JavaScript/script.js"></script>
   </div>
 </body>
 

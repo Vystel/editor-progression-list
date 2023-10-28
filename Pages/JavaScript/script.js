@@ -24,6 +24,25 @@ window.addEventListener('scroll', function() {
     }
 });
 
+// JavaScript to handle sidebar toggling
+function toggleSidebar() {
+  const sidebar = document.querySelector('.sidebar');
+  const content = document.querySelector('.content');
+  const toggleButton = document.querySelector('.toggle-sidebar');
+
+  if (sidebar.style.left === '-250px' || sidebar.style.left === '') {
+    sidebar.style.left = '0';
+    content.style.marginLeft = '250px';
+    toggleButton.style.left = '250px'; // Move the button with the sidebar
+    toggleButton.innerText = '<'; // Set text to "<" when opening the sidebar
+  } else {
+    sidebar.style.left = '-250px';
+    content.style.marginLeft = '0';
+    toggleButton.style.left = '0';
+    toggleButton.innerText = '>'; // Set text to ">" when closing the sidebar
+  }
+}
+
 /*
 window.addEventListener('scroll', () => {
   const scrollPosition = window.scrollY;

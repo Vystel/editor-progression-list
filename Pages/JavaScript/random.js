@@ -10,8 +10,8 @@ function randomLevel() {
 
   const levelContainer = document.createElement('div');
   levelContainer.classList.add('level-container');
-  levelContainer.style.marginLeft = '3vw';
-  levelContainer.style.marginRight = '3vw';
+  levelContainer.style.marginLeft = '60px';
+  levelContainer.style.marginRight = '60px';
   levelsContainer.style.display = 'flex';
   levelsContainer.style.justifyContent = 'space-evenly';
   levelsContainer.style.flexWrap = 'wrap';
@@ -21,7 +21,7 @@ function randomLevel() {
   categoryTitle.innerHTML = randomCategory.id;
   categoryTitle.style.color = `rgba(${randomCategory.color}, 1)`;
   categoryTitle.style.textAlign = 'center';
-  categoryTitle.style.marginBottom = '0vw';
+  categoryTitle.style.marginBottom = '0';
 
   const levelTitle = document.createElement('h2');
   levelTitle.innerHTML = randomLevel.title;
@@ -30,8 +30,8 @@ function randomLevel() {
 
   const levelImage = document.createElement('img');
   levelImage.src = "../../levels/images/" + randomLevel.title.replace(/\?/g, '') + ".png";
-  levelImage.style.width = "15vw";
-  levelImage.style.height = "15vw";
+  levelImage.style.width = "250px";
+  levelImage.style.height = "250px";
   levelImage.classList.add('levelImage');
 
   const levelName = randomLevel.title.replace(/\?/g, '');

@@ -8,18 +8,18 @@ function searchLevels() {
       if (level.title.toLowerCase().includes(searchTerm) || level.creator.toLowerCase().includes(searchTerm)) {
         const levelContainer = document.createElement('div');
         levelContainer.classList.add('level-container');
-        levelContainer.style.marginLeft = '3vw';
-        levelContainer.style.marginRight = '3vw';
+        levelContainer.style.marginLeft = '60px';
+        levelContainer.style.marginRight = '60px';
         levelsContainer.style.display = 'flex';
         levelsContainer.style.justifyContent = 'space-evenly';
         levelsContainer.style.flexWrap = 'wrap';
-        levelsContainer.style.margin = '5vh 0';
+        levelsContainer.style.margin = '100';
 
         const categoryTitle = document.createElement('h3');
         categoryTitle.innerHTML = category.id;
         categoryTitle.style.color = `rgba(${category.color}, 1)`;
         categoryTitle.style.textAlign = 'center';
-        categoryTitle.style.marginBottom = '0vw';
+        categoryTitle.style.marginBottom = '0';
 
         const levelTitle = document.createElement('h2');
         levelTitle.innerHTML = level.title;
@@ -28,8 +28,8 @@ function searchLevels() {
 
         const levelImage = document.createElement('img');
         levelImage.src = "../../Levels/Images/" + level.title.replace(/\?/g, '') + ".png";
-        levelImage.style.width = "15vw";
-        levelImage.style.height = "15vw";
+        levelImage.style.width = "250px";
+        levelImage.style.height = "250px";
         levelImage.classList.add('levelImage');
         levelImage.addEventListener('click', () => copyLevel(level.title));
 

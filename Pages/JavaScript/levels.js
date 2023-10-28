@@ -347,6 +347,7 @@ function generateHTML(categories) {
     tabTitle.innerHTML = id;
     tabTitle.style.lineHeight = '24px';
     tabTitle.style.margin = '0';
+    tabTitle.style.paddingTop = '10px';
     tabTitle.style.color = 'black';
     tabTitle.style.fontSize = '30px';
 

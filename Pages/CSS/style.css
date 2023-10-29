@@ -9,14 +9,6 @@ html, body {
   font-family: 'Abel';
   src: url('../../Abel-Regular.ttf') format('truetype');
 }
-@font-face {
-  font-family: 'PTSansNarrow';
-  src: url('../../PTSansNarrow-Bold.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'PTSansNarrow';
-  src: url('../../PTSansNarrow-Regular.ttf') format('truetype');
-}
 body, button, #levelSearch {
   font-family: 'Abel', 'PTSansNarrow', 'Roboto', sans-serif;
 }

@@ -29,7 +29,7 @@ function randomLevel() {
   levelTitle.style.textAlign = 'center';
 
   const levelImage = document.createElement('img');
-  levelImage.src = "../../levels/images/" + randomLevel.title.replace(/\?/g, '') + ".png";
+  levelImage.src = "../../Levels/Images/" + randomLevel.title.replace(/\?/g, '') + ".png";
   levelImage.style.width = "250px";
   levelImage.style.height = "250px";
   levelImage.classList.add('levelImage');

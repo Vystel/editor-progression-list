@@ -2,11 +2,23 @@ const randomBtn = document.getElementById('randomBtn');
 randomBtn.addEventListener('click', randomLevel);
 
 function randomLevel() {
-
   levelsContainer.innerHTML = '';
 
-  const randomCategory = categories[Math.floor(Math.random() * categories.length)];
-  const randomLevel = randomCategory.levels[Math.floor(Math.random() * randomCategory.levels.length)];
+  const totalLevels = categories.reduce((acc, category) => acc + category.levels.length, 0);
+
+  let randomIndex = Math.floor(Math.random() * totalLevels);
+
+  let selectedLevel, selectedCategory;
+  for (const category of categories) {
+    if (randomIndex < category.levels.length) {
+      selectedLevel = category.levels[randomIndex];
+      selectedCategory = category;
+      break;
+    }
+    randomIndex -= category.levels.length;
+  }
+
+  if (!selectedLevel) return;
 
   const levelContainer = document.createElement('div');
   levelContainer.classList.add('level-container');
@@ -15,26 +27,20 @@ function randomLevel() {
   levelsContainer.style.display = 'flex';
   levelsContainer.style.justifyContent = 'space-evenly';
   levelsContainer.style.flexWrap = 'wrap';
-  levelsContainer.style.margin = '5vh 0';
-
-  const categoryTitle = document.createElement('h3');
-  categoryTitle.innerHTML = randomCategory.id;
-  categoryTitle.style.color = `rgba(${randomCategory.color}, 1)`;
-  categoryTitle.style.textAlign = 'center';
-  categoryTitle.style.marginBottom = '0';
 
   const levelTitle = document.createElement('h2');
-  levelTitle.innerHTML = randomLevel.title;
+  levelTitle.innerHTML = selectedLevel.title;
   levelTitle.style.color = 'white';
   levelTitle.style.textAlign = 'center';
 
   const levelImage = document.createElement('img');
-  levelImage.src = "../../Levels/Images/" + randomLevel.title.replace(/\?/g, '') + ".png";
+  levelImage.src = "../../Levels/Images/" + selectedLevel.title.replace(/\?/g, '') + ".png";
   levelImage.style.width = "250px";
   levelImage.style.height = "250px";
   levelImage.classList.add('levelImage');
+  levelImage.style.outline = `5px solid rgba(${selectedCategory.color}, 1)`;
 
-  const levelName = randomLevel.title.replace(/\?/g, '');
+  const levelName = selectedLevel.title.replace(/\?/g, '');
   const isCompleted = localStorage.getItem(`completion_${levelName}`);
   if (isCompleted === 'true') {
     levelImage.style.filter = 'brightness(0.5)';
@@ -44,7 +50,7 @@ function randomLevel() {
     levelImage.setAttribute('data-completed', 'false');
   }
 
-  levelImage.addEventListener('click', () => copyLevel(randomLevel.title));
+  levelImage.addEventListener('click', () => copyLevel(selectedLevel.title));
 
   levelImage.addEventListener('contextmenu', function (event) {
     event.preventDefault();
@@ -52,22 +58,21 @@ function randomLevel() {
   });
 
   const levelCreator = document.createElement('p');
-  levelCreator.innerHTML = 'By ' + randomLevel.creator;
+  levelCreator.innerHTML = 'By ' + selectedLevel.creator;
   levelCreator.style.color = 'white';
   levelCreator.style.textAlign = 'center';
+  levelCreator.style.marginTop = '20px';
+  levelCreator.style.marginBottom = '20px';
 
-  levelContainer.appendChild(categoryTitle);
   levelContainer.appendChild(levelTitle);
   levelContainer.appendChild(levelImage);
   levelContainer.appendChild(levelCreator);
-
   levelsContainer.appendChild(levelContainer);
 
   if (levelsContainer.hasChildNodes()) {
     levelsContainer.style.display = 'flex';
     levelsContainer.style.justifyContent = 'center';
 
-    // Apply fade-in animation
     levelContainer.style.opacity = 0;
     levelContainer.style.transform = 'scale(0.5)';
     setTimeout(() => {

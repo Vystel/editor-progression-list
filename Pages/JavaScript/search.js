@@ -13,13 +13,6 @@ function searchLevels() {
         levelsContainer.style.display = 'flex';
         levelsContainer.style.justifyContent = 'space-evenly';
         levelsContainer.style.flexWrap = 'wrap';
-        levelsContainer.style.margin = '100';
-
-        const categoryTitle = document.createElement('h3');
-        categoryTitle.innerHTML = category.id;
-        categoryTitle.style.color = `rgba(${category.color}, 1)`;
-        categoryTitle.style.textAlign = 'center';
-        categoryTitle.style.marginBottom = '0';
 
         const levelTitle = document.createElement('h2');
         levelTitle.innerHTML = level.title;
@@ -32,13 +25,15 @@ function searchLevels() {
         levelImage.style.height = "250px";
         levelImage.classList.add('levelImage');
         levelImage.addEventListener('click', () => copyLevel(level.title));
+        levelImage.style.outline = `5px solid rgba(${category.color}, 1)`;
 
         const levelCreator = document.createElement('p');
         levelCreator.innerHTML = 'By ' + level.creator;
         levelCreator.style.color = 'white';
         levelCreator.style.textAlign = 'center';
+        levelCreator.style.marginTop = '20px';
+        levelCreator.style.marginBottom = '20px';
 
-        levelContainer.appendChild(categoryTitle);
         levelContainer.appendChild(levelTitle);
         levelContainer.appendChild(levelImage);
         levelContainer.appendChild(levelCreator);

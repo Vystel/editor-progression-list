@@ -171,8 +171,6 @@ function createLevelElement(level, parent) {
     parent.appendChild(levelContainer);
 }
 
-
-  
   function addLevel() {
     const newLevel = {
       title: "Level",
@@ -184,21 +182,69 @@ function createLevelElement(level, parent) {
   
   function exportArray() {
     const exportedCategories = JSON.parse(JSON.stringify(categories));
-  
+
     exportedCategories.forEach(category => {
-      category.levels = [];
-      const levelsContainer = document.getElementById(category.id).getElementsByClassName("levels-container")[0];
-      const levelElements = levelsContainer.getElementsByClassName("level-container");
-  
-      for (const levelElement of levelElements) {
-        const title = levelElement.getElementsByClassName("level-title")[0].value;
-        const creator = levelElement.getElementsByClassName("level-creator")[0].value;
-        category.levels.push({ title, creator });
-      }
+        category.levels = [];
+        const levelsContainer = document.getElementById(category.id).getElementsByClassName("levels-container")[0];
+        const levelElements = levelsContainer.getElementsByClassName("level-container");
+
+        for (const levelElement of levelElements) {
+            const title = levelElement.getElementsByClassName("level-title")[0].value;
+            const creator = levelElement.getElementsByClassName("level-creator")[0].value;
+            category.levels.push({ title, creator });
+        }
     });
-  
+
     console.log(exportedCategories);
+    copyToClipboard(JSON.stringify(exportedCategories, null, 2));
+}
+
+function copyToClipboard(text) {
+    const textarea = document.createElement('textarea');
+    textarea.value = text;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand('copy');
+    document.body.removeChild(textarea);
+    alert("Exported data copied to clipboard.");
+}
+
+document.getElementById('loadLevels').addEventListener('click', async function () {
+  try {
+      const text = await navigator.clipboard.readText();
+      handlePasteData(text);
+  } catch (error) {
+      alert('Failed to read clipboard. Please ensure you have given permission.');
   }
+});
+
+function handlePasteData(pastedData) {
+  try {
+      const newCategories = JSON.parse(pastedData);
+      if (Array.isArray(newCategories)) {
+          categories.splice(0, categories.length, ...newCategories);
+          clearCategories();
+          generateEverything(categories);
+      } else {
+          alert("Invalid data format.");
+      }
+  } catch (error) {
+      alert("Error parsing pasted data.");
+  }
+}
+
+function clearCategories() {
+  for (const category of categories) {
+      const tabContent = document.getElementById(category.id);
+      if (tabContent) {
+          while (tabContent.firstChild) {
+              tabContent.removeChild(tabContent.firstChild);
+          }
+      }
+  }
+}
+
+
   
   
   generateEverything(categories);

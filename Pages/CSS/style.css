@@ -215,6 +215,9 @@ body {
   transition: all 0.2s ease;
   color: black;
 }
+.defaultButton:hover{
+  background-color: rgba(130, 130, 130, 0.2);
+}
 .defaultButton:active {
   transform: scale(0.95);
   background-color: lightgrey;

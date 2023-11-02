@@ -498,12 +498,12 @@ function toggleBrightness(image) {
     image.setAttribute('data-completed', 'true');
   }
 
-  const levelName = image.getAttribute('src').match(/\/levels\/images\/(.+)\.png/)[1];
+  const levelName = image.getAttribute('src').match(/\/Levels\/Images\/(.+)\.png/)[1];
   localStorage.setItem(`completion_${levelName}`, isCompleted ? 'false' : 'true');
 
   let completedCount = 0;
   document.querySelectorAll('.levelImage').forEach((levelImage) => {
-    const levelName = levelImage.getAttribute('src').match(/\/levels\/images\/(.+)\.png/)[1];
+    const levelName = levelImage.getAttribute('src').match(/\/Levels\/Images\/(.+)\.png/)[1];
     const isCompleted = localStorage.getItem(`completion_${levelName}`);
 
     if (isCompleted === 'true') {
@@ -599,7 +599,7 @@ let currentCategory = null;
 // Restore completion state from localStorage.
 let completedCount = 0;
 document.querySelectorAll('.levelImage').forEach((levelImage) => {
-  const levelName = levelImage.getAttribute('src').match(/\/levels\/images\/(.+)\.png/)[1];
+  const levelName = levelImage.getAttribute('src').match(/\/Levels\/Images\/(.+)\.png/)[1];
   const isCompleted = localStorage.getItem(`completion_${levelName}`);
 
   if (isCompleted === 'true') {

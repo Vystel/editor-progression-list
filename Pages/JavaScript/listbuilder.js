@@ -1,78 +1,69 @@
 const categories = [
   {
-    id: "Effortless",
-    color: "128, 140, 255",
-    description: "This difficulty level is a breeze for anyone stepping into the game for the first time, offering a near-zero challenge.",
-    levels: [
+    "id": "Effortless",
+    "color": "128, 140, 255",
+    "description": "This difficulty level is a breeze for anyone stepping into the game for the first time, offering a near-zero challenge.",
+    "levels": [
       {
-        title: "Level",
-        creator: "Creator"
+        "title": "Level",
+        "creator": "Creator"
       }
     ]
   },
   {
-    id: "Trivial",
-    color: "126, 255, 213",
-    description: "These levels introduce a slight challenge, making it suitable for first-time players who want a small taste of the game's mechanics.",
-    levels: [
-    ]
+    "id": "Trivial",
+    "color": "126, 255, 213",
+    "description": "These levels introduce a slight challenge, making it suitable for first-time players who want a small taste of the game's mechanics.",
+    "levels": []
   },
   {
-    id: "Easy",
-    color: "138, 255, 126",
-    description: "While beginners might find these levels somewhat challenging, they are a walk in the park for the majority of players.",
-    levels: [
-    ]
+    "id": "Easy",
+    "color": "138, 255, 126",
+    "description": "While beginners might find these levels somewhat challenging, they are a walk in the park for the majority of players.",
+    "levels": []
   },
   {
-    id: "Medium",
-    color: "247, 255, 126",
-    description: "Beginners will struggle with these levels, but for skilled players, they offer an enjoyable experience that strikes a balance between not too difficult and not too easy.",
-    levels: [
-    ]
+    "id": "Medium",
+    "color": "247, 255, 126",
+    "description": "Beginners will struggle with these levels, but for skilled players, they offer an enjoyable experience that strikes a balance between not too difficult and not too easy.",
+    "levels": []
   },
   {
-    id: "Hard",
-    color: "255, 191, 126",
-    description: "The majority of regular players will face a considerable challenge with these levels.",
-    levels: [
-    ]
+    "id": "Hard",
+    "color": "255, 191, 126",
+    "description": "The majority of regular players will face a considerable challenge with these levels.",
+    "levels": []
   },
   {
-    id: "Challenging",
-    color: "255, 126, 126",
-    description: "These levels require a significant amount of time and effort to complete for normal players.",
-    levels: [
-    ]
+    "id": "Challenging",
+    "color": "255, 126, 126",
+    "description": "These levels require a significant amount of time and effort to complete for normal players.",
+    "levels": []
   },
   {
-    id: "Brutal",
-    color: "255, 124, 183",
-    description: "These levels are the pinnicle of difficulty for the average player, requiring even experienced players to put in some serious time and effort.",
-    levels: [
-    ]
+    "id": "Brutal",
+    "color": "255, 124, 183",
+    "description": "These levels are the pinnacle of difficulty for the average player, requiring even experienced players to put in some serious time and effort.",
+    "levels": []
   },
   {
-    id: "Extreme",
-    color: "152, 72, 100",
-    description: "Even more experienced players will find these levels exceptionally challenging.",
-    levels: [
-    ]
+    "id": "Extreme",
+    "color": "152, 72, 100",
+    "description": "Even more experienced players will find these levels exceptionally challenging.",
+    "levels": []
   },
   {
-    id: "Insane",
-    color: "130, 130, 130",
-    description: "This category is not for the light-hearted. Even the most skilled players will need extensive time and effort to conquer these levels.",
-    levels: [
-    ]
+    "id": "Insane",
+    "color": "130, 130, 130",
+    "description": "This category is not for the light-hearted. Even the most skilled players will need extensive time and effort to conquer these levels.",
+    "levels": []
   },
   {
-    id: "Mythical",
-    color: "",
-    description: "The levels in this category are almost humanly impossible. Good Luck.",
-    levels: [
-    ]
-  },
+    "id": "Mythical",
+    "color": "",
+    "description": "The levels in this category are almost humanly impossible. Good Luck.",
+    "levels": []
+  }
 ];
 
 const categoriesContainer = document.getElementById('categories');

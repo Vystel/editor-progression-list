@@ -1,336 +1,332 @@
 // This array holds all of the levels and categories.
 const categories = [
   {
-    id: "Effortless",
-    color: "128, 140, 255",
-    description: "This difficulty level is a breeze for anyone stepping into the game for the first time, offering a near-zero challenge.",
-    levels: [
+    "id": "Effortless",
+    "color": "128, 140, 255",
+    "description": "This difficulty level is a breeze for anyone stepping into the game for the first time, offering a near-zero challenge.",
+    "levels": [
       {
-        title: "Palace of Introduction",
-        creator: "VideoCake"
+        "title": "Palace of Introduction",
+        "creator": "VideoCake"
       },
       {
-        title: "Enemy Stronghold",
-        creator: "Mystifyre"
+        "title": "Enemy Stronghold",
+        "creator": "Mystifyre"
       },
       {
-        title: "Palace of Pits",
-        creator: "VideoCake"
+        "title": "Palace of Pits",
+        "creator": "VideoCake"
       },
       {
-        title: "Differential",
-        creator: "VideoCake"
+        "title": "Differential",
+        "creator": "VideoCake"
       },
       {
-        title: "Heavenly Landscape",
-        creator: "Mystifyre"
+        "title": "Heavenly Landscape",
+        "creator": "Mystifyre"
       },
       {
-        title: "First Light",
-        creator: "abho"
+        "title": "First Light",
+        "creator": "abho"
       },
       {
-        title: "Quam I",
-        creator: "VideoCake"
+        "title": "Quam I",
+        "creator": "VideoCake"
       },
       {
-        title: "Socket",
-        creator: "abho"
+        "title": "Socket",
+        "creator": "abho"
       },
       {
-        title: "Forgotten Area",
-        creator: "MegaLordX8"
+        "title": "Forgotten Area",
+        "creator": "MegaLordX8"
       },
       {
-        title: "Easy, right? Not enough.",
-        creator: "アニー"
+        "title": "Easy, right? Not enough.",
+        "creator": "アニー"
       },
       {
-        title: "Deep Snow",
-        creator: "VideoCake"
+        "title": "Deep Snow",
+        "creator": "VideoCake"
       },
       {
-        title: "Magic Routes",
-        creator: "VideoCake"
+        "title": "Magic Routes",
+        "creator": "VideoCake"
       },
       {
-        title: "Spinners and Squares",
-        creator: "Mystifyre"
+        "title": "Spinners and Squares",
+        "creator": "Mystifyre"
       },
       {
-        title: "Generator",
-        creator: "abho"
+        "title": "Generator",
+        "creator": "abho"
       },
       {
-        title: "Syncronized",
-        creator: "VideoCake"
+        "title": "Syncronized",
+        "creator": "VideoCake"
       },
       {
-        title: "Off-Grid",
-        creator: "VideoCake"
+        "title": "Off-Grid",
+        "creator": "VideoCake"
       }
     ]
   },
   {
-    id: "Trivial",
-    color: "126, 255, 213",
-    description: "These levels introduce a slight challenge, making it suitable for first-time players who want a small taste of the game's mechanics.",
-    levels: [
+    "id": "Trivial",
+    "color": "126, 255, 213",
+    "description": "These levels introduce a slight challenge, making it suitable for first-time players who want a small taste of the game's mechanics.",
+    "levels": [
       {
-        title: "Starter Biome",
-        creator: "abho"
+        "title": "Starter Biome",
+        "creator": "abho"
       },
       {
-        title: "Crude Zone",
-        creator: "MegaLordX8"
+        "title": "Crude Zone",
+        "creator": "MegaLordX8"
       },
       {
-        title: "Quam II",
-        creator: "VideoCake"
+        "title": "Quam II",
+        "creator": "VideoCake"
       },
       {
-        title: "Palace of Circles",
-        creator: "VideoCake"
+        "title": "Palace of Circles",
+        "creator": "VideoCake"
       },
       {
-        title: "Trails of the Clouds",
-        creator: "Mystifyre"
+        "title": "Trails of the Clouds",
+        "creator": "Mystifyre"
       }
     ]
   },
   {
-    id: "Easy",
-    color: "138, 255, 126",
-    description: "While beginners might find these levels somewhat challenging, they are a walk in the park for the majority of players.",
-    levels: [
+    "id": "Easy",
+    "color": "138, 255, 126",
+    "description": "While beginners might find these levels somewhat challenging, they are a walk in the park for the majority of players.",
+    "levels": [
       {
-        title: "Quartet",
-        creator: "abho"
+        "title": "Quartet",
+        "creator": "abho"
       },
       {
-        title: "Segment 6",
-        creator: "MegaLordX8"
+        "title": "Segment 6",
+        "creator": "MegaLordX8"
       },
       {
-        title: "Improve",
-        creator: "VideoCake"
+        "title": "Improve",
+        "creator": "VideoCake"
       },
       {
-        title: "Nimble Factory",
-        creator: "abho"
+        "title": "Nimble Factory",
+        "creator": "abho"
       },
       {
-        title: "Frost Trial",
-        creator: "MegaLordX8"
+        "title": "Frost Trial",
+        "creator": "MegaLordX8"
       },
       {
-        title: "Aichmophobia",
-        creator: "cyAn"
+        "title": "Aichmophobia",
+        "creator": "cyAn"
       },
       {
-        title: "Symmetricity",
-        creator: "Mystifyre"
+        "title": "Symmetricity",
+        "creator": "Mystifyre"
       },
       {
-        title: "Quam III",
-        creator: "VideoCake"
+        "title": "Quam III",
+        "creator": "VideoCake"
       },
       {
-        title: "Spectral Network",
-        creator: "cyAn"
+        "title": "Spectral Network",
+        "creator": "cyAn"
       },
       {
-        title: "Random Corridors",
-        creator: "TheEgglet"
+        "title": "Random Corridors",
+        "creator": "TheEgglet"
       },
       {
-        title: "Enemy Kingdom",
-        creator: "Mystifyre"
+        "title": "Enemy Kingdom",
+        "creator": "Mystifyre"
       },
       {
-        title: "Death Road",
-        creator: "MegaLordX8"
+        "title": "Death Road",
+        "creator": "MegaLordX8"
       },
       {
-        title: "Palace of Water",
-        creator: "VideoCake"
+        "title": "Palace of Water",
+        "creator": "VideoCake"
       }
     ]
   },
   {
-    id: "Medium",
-    color: "247, 255, 126",
-    description: "Beginners will struggle with these levels, but for skilled players, they offer an enjoyable experience that strikes a balance between not too difficult and not too easy.",
-    levels: [
+    "id": "Medium",
+    "color": "247, 255, 126",
+    "description": "Beginners will struggle with these levels, but for skilled players, they offer an enjoyable experience that strikes a balance between not too difficult and not too easy.",
+    "levels": [
       {
-        title: "Segment 5",
-        creator: "MegaLordX8"
+        "title": "Segment 5",
+        "creator": "MegaLordX8"
       },
       {
-        title: "Square Package",
-        creator: "VideoCake"
+        "title": "Square Package",
+        "creator": "VideoCake"
       },
       {
-        title: "Crushers",
-        creator: "AudiGamer"
+        "title": "Crushers",
+        "creator": "AudiGamer"
       },
       {
-        title: "Wiper",
-        creator: "abho"
+        "title": "Wiper",
+        "creator": "abho"
       },
       {
-        title: "Turntable Bank",
-        creator: "abho"
+        "title": "Turntable Bank",
+        "creator": "abho"
       },
       {
-        title: "Complex Conveyor Maze",
-        creator: "abho & cyAn"
+        "title": "Complex Conveyor Maze",
+        "creator": "abho & cyAn"
       },
       {
-        title: "Squish",
-        creator: "VideoCake"
+        "title": "Squish",
+        "creator": "VideoCake"
       },
       {
-        title: "Tetraphobia",
-        creator: "cyAn"
+        "title": "Tetraphobia",
+        "creator": "cyAn"
       },
       {
-        title: "Water Park",
-        creator: "VideoCake"
+        "title": "Water Park",
+        "creator": "VideoCake"
       },
       {
-        title: "Symmetry-Asymmetry",
-        creator: "cyAn"
+        "title": "Symmetry-Asymmetry",
+        "creator": "cyAn"
       },
       {
-        title: "Second Trial",
-        creator: "MegaLordX8"
+        "title": "Second Trial",
+        "creator": "MegaLordX8"
       },
       {
-        title: "Cellentropy",
-        creator: "Mystifyre"
+        "title": "Cellentropy",
+        "creator": "Mystifyre"
       },
       {
-        title: "Delta Loft",
-        creator: "abho"
+        "title": "Delta Loft",
+        "creator": "abho"
       },
       {
-        title: "Compressitory",
-        creator: "abho"
+        "title": "Compressitory",
+        "creator": "abho"
       },
       {
-        title: "Haven of Arts",
-        creator: "cyAn"
+        "title": "Haven of Arts",
+        "creator": "cyAn"
       },
       {
-        title: "Abyss Oasis",
-        creator: "abho"
+        "title": "Abyss Oasis",
+        "creator": "abho"
       },
       {
-        title: "Chamber",
-        creator: "abho"
+        "title": "Chamber",
+        "creator": "abho"
       },
       {
-        title: "Fluoride",
-        creator: "MegaLordX8"
+        "title": "Fluoride",
+        "creator": "MegaLordX8"
       },
       {
-        title: "Fading Islands",
-        creator: "cyAn"
+        "title": "Fading Islands",
+        "creator": "cyAn"
       },
       {
-        title: "Implode",
-        creator: "MegaLordX8"
+        "title": "Implode",
+        "creator": "MegaLordX8"
       },
       {
-        title: "Icy Sights",
-        creator: "VideoCake"
+        "title": "Icy Sights",
+        "creator": "VideoCake"
       },
       {
-        title: "Velocity",
-        creator: "MegaLordX8"
+        "title": "Velocity",
+        "creator": "MegaLordX8"
       },
       {
-        title: "Endurance",
-        creator: "abho"
+        "title": "Endurance",
+        "creator": "abho"
       },
       {
-        title: "Cryophobia",
-        creator: "cyAn"
+        "title": "Cryophobia",
+        "creator": "cyAn"
       },
       {
-        title: "Quam V",
-        creator: "VideoCake"
+        "title": "Quam V",
+        "creator": "VideoCake"
       },
       {
-        title: "Infernal Array",
-        creator: "MegaLordX8"
+        "title": "Infernal Array",
+        "creator": "MegaLordX8"
       },
       {
-        title: "Conveying",
-        creator: "AudiGamer"
+        "title": "Conveying",
+        "creator": "AudiGamer"
       },
       {
-        title: "Vorpal",
-        creator: "abho"
+        "title": "Vorpal",
+        "creator": "abho"
       },
       {
-        title: "Equinoxe",
-        creator: "zxcvb"
+        "title": "Equinoxe",
+        "creator": "zxcvb"
       },
       {
-        title: "Forgotten Depth",
-        creator: "abho"
+        "title": "Forgotten Depth",
+        "creator": "abho"
       }
     ]
   },
   {
-    id: "Hard",
-    color: "255, 191, 126",
-    description: "The majority of regular players will face a considerable challenge with these levels.",
-    levels: [
+    "id": "Hard",
+    "color": "255, 191, 126",
+    "description": "The majority of regular players will face a considerable challenge with these levels.",
+    "levels": [
       {
-        title: "Plasteel",
-        creator: "abho"
+        "title": "Plasteel",
+        "creator": "abho"
       }
     ]
   },
   {
-    id: "Challenging",
-    color: "255, 126, 126",
-    description: "These levels require a significant amount of time and effort to complete for normal players.",
-    levels: [
-    ]
+    "id": "Challenging",
+    "color": "255, 126, 126",
+    "description": "These levels require a significant amount of time and effort to complete for normal players.",
+    "levels": []
   },
   {
-    id: "Brutal",
-    color: "255, 124, 183",
-    description: "These levels are the pinnicle of difficulty for the average player, requiring even experienced players to put in some serious time and effort.",
-    levels: [
-    ]
+    "id": "Brutal",
+    "color": "255, 124, 183",
+    "description": "These levels are the pinnacle of difficulty for the average player, requiring even experienced players to put in some serious time and effort.",
+    "levels": []
   },
   {
-    id: "Extreme",
-    color: "152, 72, 100",
-    description: "Even more experienced players will find these levels exceptionally challenging.",
-    levels: [
-    ]
+    "id": "Extreme",
+    "color": "152, 72, 100",
+    "description": "Even more experienced players will find these levels exceptionally challenging.",
+    "levels": []
   },
   {
-    id: "Insane",
-    color: "130, 130, 130",
-    description: "This category is not for the light-hearted. Even the most skilled players will need extensive time and effort to conquer these levels.",
-    levels: [
-    ]
+    "id": "Insane",
+    "color": "130, 130, 130",
+    "description": "This category is not for the light-hearted. Even the most skilled players will need extensive time and effort to conquer these levels.",
+    "levels": []
   },
   {
-    id: "Mythical",
-    color: "",
-    description: "The levels in this category are almost humanly impossible. Good Luck.",
-    levels: [
-    ]
-  },
+    "id": "Mythical",
+    "color": "",
+    "description": "The levels in this category are almost humanly impossible. Good Luck.",
+    "levels": []
+  }
 ];
+
 
 // Function which builds the category in HTML based off the array.
 function generateHTML(categories) {

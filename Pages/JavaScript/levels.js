@@ -343,7 +343,7 @@ function generateHTML(categories) {
     tabTitle.innerHTML = id;
     tabTitle.style.lineHeight = '24px';
     tabTitle.style.margin = '0';
-    tabTitle.style.paddingTop = '10px';
+    tabTitle.style.paddingTop = '20px';
     tabTitle.style.color = 'black';
     tabTitle.style.fontSize = '30px';
 
@@ -609,3 +609,30 @@ document.querySelectorAll('.levelImage').forEach((levelImage) => {
 });
 
 levelCountDiv.textContent = `You have completed ${completedCount} out of ${levelCount} levels on this list.`;
+
+
+
+// Function to open a modal
+  function openModal(modalId) {
+    document.getElementById(modalId).style.display = 'flex';
+  }
+
+  // Function to close a modal
+  function closeModal(modalId) {
+    document.getElementById(modalId).style.display = 'none';
+  }
+
+  // Attach open modal events to buttons
+  document.getElementById('helpBtn').onclick = function() {
+    openModal('instructionModal');
+  };
+  document.getElementById('statsBtn').onclick = function() {
+    openModal('statsModal');
+  };
+
+  // Close the modal when the user clicks anywhere outside of the modal
+  window.onclick = function(event) {
+    if (event.target.classList.contains('modal')) {
+      closeModal(event.target.id);
+    }
+  };

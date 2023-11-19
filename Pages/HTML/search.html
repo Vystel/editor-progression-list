@@ -1,75 +1,69 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>Editor Progression List</title>
-  <link href="../CSS/style.css" rel="stylesheet" type="text/css" />
-  <link href="../CSS/search.css" rel="stylesheet" type="text/css" />
-  <link rel="shortcut icon" href="../../Images/EPLwebsiteLogo.ico" type="image/x-icon">
-  <meta property="og:title" content="Editor Progression List">
-  <meta property="og:description" content="On this website, you'll discover a selection of high-quality levels made using abho's World's Hardest Game level editor, sorted from easiest to hardest.">
-  <meta property="og:image" content="https://i.ibb.co/djrqpx5/logo-2.png">
-  <meta property="og:url" content="editor-progression-list.mystifyre.repl.co">
-  <meta property="og:type" content="website">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-</head>
-
-<body>
-  <div class="sidebar">
-    <div class="sidebar-links">
-      <a href="../../index.html">
-        <img src="../../Images/UI/Home.png" class="icon">
-        Home
-      </a>
-      <a href="./levels.html">
-        <img src="../../Images/UI/Levels.png" class="icon">
-        Levels
-      </a>
-      <a class="current">
-        <img src="../../Images/UI/Search.png" class="icon">
-        Search
-      </a>
-      <a href="./random.html">
-        <img src="../../Images/UI/Random.png" class="icon">
-        Random
-      </a>
-    </div>
-    <div class="sidebar-social">
-      <a href="https://discord.gg/AagvaDSfT4" target="_blank">
-        <img src="../../Images/UI/Discord.png" class="icon">
-        TWHG Discord Server
-      </a>
-      <a href="https://twhgedit.netlify.app" target="_blank">
-        <img src="../../Images/UI/TWHGEdit.png" class="icon">
-        TWHG Editor 1
-      </a>
-      <a href="https://twhgedit2.netlify.app" target="_blank">
-        <img src="../../Images/UI/TWHGEdit2.png" class="icon">
-        TWHG Editor 2
-      </a>
-      <a href="https://abho.itch.io/twhg-ue" target="_blank">
-        <img src="../../Images/UI/TWHGEdit3.png" class="icon">
-        TWHG Editor 3
-      </a>
-    </div>
-  </div>
-  <button class="toggle-sidebar" onclick="toggleSidebar()">></button>
-  <div class="content">
-    <img src="../../Images/UI/Logo.png" alt="EPL Logo" class="logo">
-    <p style="font-weight: bold;">Search for Levels or Creators!</p>
-
-    <div class="search-container">
-      <input type="text" id="levelSearch" oninput="searchLevels()">
-    </div>
-
-    <div id="levelsContainer"></div>
-    
-    <script src="../JavaScript/search.js"></script>
-    <script src="../JavaScript/levels.js"></script>
-    <script src="../JavaScript/script.js"></script>
-  </div>
-</body>
-
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<title>Editor Progression List</title>
+		<link href="../CSS/style.css" rel="stylesheet" type="text/css" />
+		<link href="../CSS/search.css" rel="stylesheet" type="text/css" />
+		<link rel="shortcut icon" href="../../Images/EPLwebsiteLogo.ico" type="image/x-icon">
+		<meta property="og:title" content="Editor Progression List">
+		<meta property="og:description" content="On this website, you'll discover a selection of high-quality levels made using abho's World's Hardest Game level editor, sorted from easiest to hardest.">
+		<meta property="og:image" content="https://i.ibb.co/djrqpx5/logo-2.png">
+		<meta property="og:url" content="editor-progression-list.mystifyre.repl.co">
+		<meta property="og:type" content="website">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	</head>
+	<body>
+		<div class="sidebar">
+			<div class="sidebar-links">
+				<a href="../../index.html">
+				<img src="../../Images/UI/Home.png" class="icon">
+				Home
+				</a>
+				<a href="./levels.html">
+				<img src="../../Images/UI/Levels.png" class="icon">
+				Levels
+				</a>
+				<a class="current">
+				<img src="../../Images/UI/Search.png" class="icon">
+				Search
+				</a>
+				<a href="./random.html">
+				<img src="../../Images/UI/Random.png" class="icon">
+				Random
+				</a>
+			</div>
+			<div class="sidebar-social">
+				<a href="https://discord.gg/AagvaDSfT4" target="_blank">
+				<img src="../../Images/UI/Discord.png" class="icon">
+				TWHG Discord Server
+				</a>
+				<a href="https://twhgedit.netlify.app" target="_blank">
+				<img src="../../Images/UI/TWHGEdit.png" class="icon">
+				TWHG Editor 1
+				</a>
+				<a href="https://twhgedit2.netlify.app" target="_blank">
+				<img src="../../Images/UI/TWHGEdit2.png" class="icon">
+				TWHG Editor 2
+				</a>
+				<a href="https://abho.itch.io/twhg-ue" target="_blank">
+				<img src="../../Images/UI/TWHGEdit3.png" class="icon">
+				TWHG Editor 3
+				</a>
+			</div>
+		</div>
+		<button class="toggle-sidebar small-button" onclick="toggleSidebar()">></button>
+		<div class="content">
+			<img src="../../Images/UI/Logo.png" alt="EPL Logo" class="logo">
+			<p style="font-weight: bold;">Search for Levels or Creators!</p>
+			<div class="search-container">
+				<input type="text" id="levelSearch" oninput="searchLevels()">
+			</div>
+			<div id="levelsContainer"></div>
+			<script src="../JavaScript/search.js"></script>
+			<script src="../JavaScript/levels.js"></script>
+			<script src="../JavaScript/script.js"></script>
+		</div>
+	</body>
 </html>

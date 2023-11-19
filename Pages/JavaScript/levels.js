@@ -507,7 +507,8 @@ function toggleBrightness(image) {
     }
   });
 
-  levelCountDiv.textContent = `You have completed ${completedCount} out of ${levelCount} levels on this list.`;
+  levelCountDiv.innerHTML = `You have completed <strong>${completedCount}</strong> out of <strong>${levelCount}</strong> levels on this list.`;
+  updateHardestLevelText();
 }
 
 // Event Listeners
@@ -608,7 +609,36 @@ document.querySelectorAll('.levelImage').forEach((levelImage) => {
   }
 });
 
-levelCountDiv.textContent = `You have completed ${completedCount} out of ${levelCount} levels on this list.`;
+levelCountDiv.innerHTML = `You have completed <strong>${completedCount}</strong> out of <strong>${levelCount}</strong> levels on this list.`;
+// Function to find the last completed level
+function findLastCompletedLevel() {
+  let lastCompletedLevel = null;
+  for (const category of categories) {
+    for (const level of category.levels) {
+      const levelName = level.title.replace(/\?/g, '');
+      const isCompleted = localStorage.getItem(`completion_${levelName}`);
+      if (isCompleted === 'true') {
+        lastCompletedLevel = level.title;
+      }
+    }
+  }
+  return lastCompletedLevel;
+}
+
+// Function to update the hardest level text
+function updateHardestLevelText() {
+  const lastCompletedLevel = findLastCompletedLevel();
+  const hardestLevelDiv = document.getElementById('hardest-level');
+
+  if (lastCompletedLevel) {
+    hardestLevelDiv.innerHTML = `The hardest level you have completed on this list is <strong>${lastCompletedLevel}</strong>.`;
+  } else {
+    hardestLevelDiv.innerHTML = `You haven't completed any levels yet.`;
+  }
+}
+
+// Call the updateHardestLevelText function initially and whenever brightness is toggled
+updateHardestLevelText();
 
 
 

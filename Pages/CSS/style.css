@@ -221,12 +221,12 @@ body {
 
 @media (max-width: 1350px) {
     .button {
-        width: 16%; /* Set the button width to 16% */
-        margin-right: 10px; /* Maintain the margin to the right */
+        width: 16%;
+        margin-right: 10px;
     }
 
     .button-container {
-        flex-wrap: wrap; /* Allow the container to wrap items */
+        flex-wrap: wrap;
     }
 }
 
